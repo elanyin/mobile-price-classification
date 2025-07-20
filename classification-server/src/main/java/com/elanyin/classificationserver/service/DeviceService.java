@@ -39,4 +39,8 @@ public class DeviceService {
     public void deleteDevice(Long id) {
         deviceRepository.deleteById(id);
     }
+
+    public void predictPrice(Long id) {
+        System.out.println("Need implement");
+    }
 }

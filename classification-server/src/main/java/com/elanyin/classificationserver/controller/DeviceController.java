@@ -41,4 +41,10 @@ public class DeviceController {
         deviceService.deleteDevice(id);
         return ResultWrapper.success(null, "Device deleted successfully");
     }
+
+    @PostMapping("/predict/{id}")
+    public ResultWrapper<Device> predictPrice(@PathVariable Long id) {
+        deviceService.predictPrice(id);
+        return  ResultWrapper.failure("not implemented");
+    }
 }
