@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/api/devices")
@@ -42,9 +43,9 @@ public class DeviceController {
         return ResultWrapper.success(null, "Device deleted successfully");
     }
 
-    @PostMapping("/predict/{id}")
-    public ResultWrapper<Device> predictPrice(@PathVariable Long id) {
-        deviceService.predictPrice(id);
-        return  ResultWrapper.failure("not implemented");
+    @PostMapping("/predict")
+    public ResultWrapper<Integer> predict(@RequestBody Map<String, Object> device) {
+        Integer priceRange = deviceService.predictPriceRange(device);
+        return ResultWrapper.success(priceRange, "Predict price range successfully");
     }
 }

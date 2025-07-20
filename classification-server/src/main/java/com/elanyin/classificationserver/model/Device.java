@@ -1,11 +1,7 @@
 package com.elanyin.classificationserver.model;
 
-
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 @Data
 @Table(name = "devices")
@@ -22,8 +18,8 @@ public class Device {
     @Column(name = "battery_power", nullable = false)
     private Integer batteryPower;
 
-    @Column(name = "bluetooth", nullable = false)
-    private Boolean bluetooth;
+    @Column(name = "blue", nullable = false)
+    private Boolean blue;
 
     @Column(name = "clock_speed", nullable = false)
     private Double clockSpeed;
@@ -31,41 +27,41 @@ public class Device {
     @Column(name = "dual_sim", nullable = false)
     private Boolean dualSim;
 
-    @Column(name = "front_camera", nullable = false)
-    private Integer frontCamera;
+    @Column(name = "fc", nullable = false)
+    private Integer fc;
 
     @Column(name = "four_g", nullable = false)
     private Boolean fourG;
 
-    @Column(name = "internal_memory", nullable = false)
-    private Integer internalMemory;
+    @Column(name = "int_memory", nullable = false)
+    private Integer intMemory;
 
-    @Column(name = "mobile_depth", nullable = false)
-    private Double mobileDepth;
+    @Column(name = "m_dep", nullable = false)
+    private Double mDep;
 
-    @Column(name = "mobile_weight", nullable = false)
-    private Integer mobileWeight;
+    @Column(name = "mobile_wt", nullable = false)
+    private Integer mobileWt;
 
-    @Column(name = "num_cores", nullable = false)
-    private Integer numCores;
+    @Column(name = "n_cores", nullable = false)
+    private Integer nCores;
 
-    @Column(name = "primary_camera", nullable = false)
-    private Integer primaryCamera;
+    @Column(name = "pc", nullable = false)
+    private Integer pc;
 
-    @Column(name = "pixel_height", nullable = false)
-    private Integer pixelHeight;
+    @Column(name = "px_height", nullable = false)
+    private Integer pxHeight;
 
-    @Column(name = "pixel_width", nullable = false)
-    private Integer pixelWidth;
+    @Column(name = "px_width", nullable = false)
+    private Integer pxWidth;
 
     @Column(name = "ram", nullable = false)
     private Integer ram;
 
-    @Column(name = "screen_height", nullable = false)
-    private Integer screenHeight;
+    @Column(name = "sc_h", nullable = false)
+    private Integer scH;
 
-    @Column(name = "screen_width", nullable = false)
-    private Integer screenWidth;
+    @Column(name = "sc_w", nullable = false)
+    private Integer scW;
 
     @Column(name = "talk_time", nullable = false)
     private Integer talkTime;
